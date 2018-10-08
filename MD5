@@ -1,0 +1,14 @@
+4ce518bf2ffc2899a10f147f4266e298 *DESCRIPTION
+3eb8ecb71d49539273d2e80216b361d2 *NAMESPACE
+88155a31b832e306a3dfb71f956c7961 *NEWS
+9ec3744afbada0d1d5686660bcb6bde8 *R/EM_functions.R
+c7253d6f43ee9d2e10744c2798b25ea1 *R/EM_model.R
+ab9f7c891cc217eea62e535580c03da9 *inst/extdata/example_expmat.RData
+0f40ee46c33d09df1ce3f8bae53a7b21 *inst/extdata/example_expmat.csv
+e2ddfc815d072aade7f2dfe45ecca689 *inst/extdata/example_results.RData
+666ed37d33eba423cbe58f7ae802b2cd *inst/extdata/example_results.pdf
+5ecf8d07bb0e24cc38fb9f4680176b9c *inst/extdata/example_signatures.RData
+2124b83f2286ac5ec9a36c651499c65d *inst/extdata/example_signatures.csv
+730889996da2a21d09be7e7476f876f9 *man/SCINA.Rd
+e957d2a8dcbb9b8ab557fa1a69250ca9 *man/plotheat.SCINA.Rd
+4f2b3c8eaade02e345b59ebe233712a2 *man/preprocess.signatures.Rd
