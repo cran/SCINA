@@ -2,15 +2,15 @@
 % Please edit documentation in R/EM_model.R
 \name{SCINA}
 \alias{SCINA}
-\title{A semi-supervised category identification and assignment tool.}
+\title{A semi-supervised cell type identification and assignment tool.}
 \usage{
 SCINA(exp, signatures, max_iter = 100, convergence_n = 10, convergence_rate = 0.99, 
     sensitivity_cutoff = 1, rm_overlap = 1, allow_unknown = 1, log_file = "SCINA.log")
 }
 \arguments{
-\item{exp}{A normalized matrix representing the target dataset. Columns correpond to objects (cell barcodes for example), rows correspond to attributes or variables (gene symbols for example).}
+\item{exp}{A normalized matrix representing the gene expression levels. Columns correpond to cells, rows correspond to genes or protein symbols.}
 
-\item{signatures}{A list contains multiple signature identifier lists. Each signature identifier list (genes for example) represents prior knowledge for one category (cell type for example), containing genes or protein symbols with high degree of detection.}
+\item{signatures}{A list contains multiple signature vectors. Each signature vector contains genes or protein symbols, representing the prior knowledge for one cell type.}
 
 \item{max_iter}{An integer > 0. Default is 100. Max iterations allowed for the EM algorithm.}
 
@@ -22,7 +22,7 @@ SCINA(exp, signatures, max_iter = 100, convergence_n = 10, convergence_rate = 0.
 
 \item{allow_unknown}{A binary value, default 1 (TRUE). If 0 (FALSE) then no cell will be assigned to the 'unknown' category.}
 
-\item{convergence_n}{An integer > 0. Default is 10. Stop the EM algorithm if during the last n rounds of iterations, cell type assignment keeps steady above the convergence_rate.}
+\item{convergence_n}{An integer > 0. Default is 10. Stop the SCINA algorithm if during the last n rounds of iterations, cell type assignment keeps steady above the convergence_rate.}
 
 \item{log_file}{A string names the record of the running status of the SCINA algorithem, default 'SCINA.log'.}
 }
@@ -31,8 +31,8 @@ SCINA(exp, signatures, max_iter = 100, convergence_n = 10, convergence_rate = 0.
   http://lce.biohpc.swmed.edu/scina/.
   }
  
-  For any symbols in signature lists, if the category is identified with symbol X's 
-  low detection level, please specify the symbol as 'low_X'. The name for the list is the category.
+  For any symbols in signature list, if the cell type is identified with symbol X's 
+  low detection level, please specify the symbol as 'low_X'. The name for the list is the cell type.
 					
   Details for 'low_X' (take scRNA-Seqs as an example):\cr
   (a) There are 4 cell types, the first one highly express one gene A, and the other three lowly express the same gene. 
@@ -44,8 +44,7 @@ SCINA(exp, signatures, max_iter = 100, convergence_n = 10, convergence_rate = 0.
  (c) There are 4 cell types, the first one lowly express one gene A, the second and third one moderately express gene A, 
 	and the last one highly express gene A. Then is it better to specify A as the low marker for cell type 1, and as the high 
 	expression marker for cell type 4.\cr
- (d) The same specification can be applied to protein markers in CyTOF anlysis.\cr
-    For immune cell types, an example signature lists can be found in \code{\link[DisHet]{eTME_signatures}.}
+ (d) The same specification can be applied to protein markers in CyTOF anlysis.
 	
   Small sensitivity_cutoff leads to more signatures to be removed, and 1 denotes that no signature is removed.
 }
