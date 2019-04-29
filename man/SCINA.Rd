@@ -8,7 +8,7 @@ SCINA(exp, signatures, max_iter = 100, convergence_n = 10, convergence_rate = 0.
     sensitivity_cutoff = 1, rm_overlap = 1, allow_unknown = 1, log_file = "SCINA.log")
 }
 \arguments{
-\item{exp}{A normalized matrix representing the gene expression levels. Columns correpond to cells, rows correspond to genes or protein symbols.}
+\item{exp}{A normalized matrix representing the gene expression levels. The log-transformation is suggested to avoid heavy-tailed datasets. Columns correpond to cells, rows correspond to genes or protein symbols.}
 
 \item{signatures}{A list contains multiple signature vectors. Each signature vector contains genes or protein symbols, representing the prior knowledge for one cell type.}
 

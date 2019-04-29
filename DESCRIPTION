@@ -1,8 +1,8 @@
 Package: SCINA
 Type: Package
 Title: A Semi-Supervised Category Identification and Assignment Tool
-Version: 1.0.1
-Date: 2018-09-18
+Version: 1.1.0
+Date: 2019-4-29
 Author: Ze Zhang
 Maintainer: Ze Zhang <Ze.Zhang@utsouthwestern.edu>
 Depends: R (>= 2.15.0), MASS, gplots
@@ -12,6 +12,6 @@ URL: http://lce.biohpc.swmed.edu/scina/
 License: GPL-2
 NeedsCompilation: no
 RoxygenNote: 6.1.0
-Packaged: 2018-10-12 20:45:56 UTC; s421955
+Packaged: 2019-04-29 19:27:04 UTC; s421955
 Repository: CRAN
-Date/Publication: 2018-10-13 08:40:19 UTC
+Date/Publication: 2019-04-29 19:40:03 UTC
