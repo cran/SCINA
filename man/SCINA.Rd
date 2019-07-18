@@ -54,7 +54,7 @@ cell_labels return a vector contains cell type mapping results for each cell.
 probabilities return a probability matrix indicating the predicted probability for each cell belongs to each cell type respectively.
 }
 \description{
-An automatic cell type detection and assignment algorithm for single cell RNA-Seq (scRNA-seq) and Cytof/FACS data.
+An automatic cell type detection and assignment algorithm for single cell RNA-Seq (scRNA-seq) and Cytof/FACS data. See Zhang Z, et al (2019) <doi:10.3390/genes10070531> for more details.
 }
 \examples{
 load(system.file('extdata','example_expmat.RData', package = "SCINA"))
